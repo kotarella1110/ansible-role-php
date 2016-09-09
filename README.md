@@ -4,8 +4,6 @@
 
 Installs PHP on RedHat/CentOS and Debian/Ubuntu servers.
 
-This role is forked from [geerlingguy/ansible-role-php](https://github.com/geerlingguy/ansible-role-php).
-
 ## Requirements
 
 If you're using an older LTS release of RHEL, with an old/outdated version of PHP, you need to use a repo with a maintained PHP version, as this role only works with [PHP versions that are currently supported](http://php.net/supported-versions.php) by the PHP community.
