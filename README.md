@@ -1,8 +1,9 @@
 # Ansible Role: PHP
 
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-php.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-php)
+[![Build Status](https://travis-ci.org/kotarella1110/ansible-role-php.svg?branch=master)](https://travis-ci.org/kotarella1110/ansible-role-php)
 
 Installs PHP on RedHat/CentOS and Debian/Ubuntu servers.
+This role is forked from [geerlingguy/ansible-role-php](https://github.com/geerlingguy/ansible-role-php).
 
 ## Requirements
 
@@ -46,6 +47,10 @@ When using this role with PHP running as `php-fpm` instead of as a process insid
 
     php_enable_php_fpm: false
 
+You can specify the configuration file you want to use as a template.The default setting is a `"php-fpm.conf.j2"`.
+
+    php_fpm_conf_src: "{{ playbook_dir }}/php-fpm.conf.j2"
+
 If you're using Apache, you can easily get it configured to work with PHP-FPM using the [geerlingguy.apache-php-fpm](https://github.com/geerlingguy/ansible-role-apache-php-fpm) role.
 
     php_fpm_listen: "127.0.0.1:9000"
@@ -60,6 +65,10 @@ Specific settings inside the default `www.conf` PHP-FPM pool. If you'd like to m
 ### php.ini settings
 
     php_use_managed_ini: true
+
+You can specify the configuration file you want to use as a template.The default setting is a `"php.ini"`.
+
+    php_conf_src: "{{ playbook_dir }}/php.ini.j2"
 
 By default, all the extra defaults below are applied through the php.ini included with this role. You can self-manage your php.ini file (if you need more flexility in its configuration) by setting this to `false` (in which case all the below variables will be ignored).
 
@@ -90,6 +99,10 @@ Various defaults for PHP. Only used if `php_use_managed_ini` is set to `true`.
 
 ### OpCache-related Variables
 
+You can specify the configuration file you want to use as a template.The default setting is a `"opcache.ini.j2"`.
+
+    php_opcache_conf_src: "{{ playbook_dir }}/opcache.ini.j2"
+
 The OpCache is included in PHP starting in version 5.5, and the following variables will only take effect if the version of PHP you have installed is 5.5 or greater.
 
     php_opcache_enable: "1"
@@ -114,6 +127,10 @@ The platform-specific opcache configuration filename. Generally the default shou
     php_enable_apc: true
 
 Whether to enable APCu. Other APCu variables will be ineffective if this is set to false.
+
+    php_apc_conf_src: "{{ playbook_dir }}/apc.ini.j2"
+
+You can specify the configuration file you want to use as a template.The default setting is a `"apc.ini.j2"`.
 
     php_apc_shm_size: "96M"
     php_apc_enable_cli: "0"
@@ -201,4 +218,4 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2014 by [Jeff Geerling](http://jeffgeerling.com/), author of [Ansible for DevOps](http://ansiblefordevops.com/).
+This role was created in 2016 by Kotaro Sugawara.
