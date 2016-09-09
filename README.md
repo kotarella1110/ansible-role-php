@@ -22,6 +22,11 @@ _Note: If you're using Debian/Ubuntu, you also need to install `libapache2-mod-f
 
     php_enable_webserver: true
 
+(For Ubuntu only) Allows you to set a repository for the installation of PHP.
+When using the PHP PPA (12.04: `ppa:ondrej/php`, other: `ppa:ondrej/php`), you need to set the following variable to `true`:
+
+    php_ppa_use: false
+
 If your usage of PHP is tied to a web server (e.g. Apache or Nginx), leave this default value. If you are using PHP server-side or to run some small application, set this value to `false` so this role doesn't attempt to interact with a web server.
 
     php_webserver_daemon: "httpd"
@@ -194,7 +199,7 @@ None.
       vars_files:
         - vars/main.yml
       roles:
-        - { role: geerlingguy.php }
+        - { role: kotarella1110.php }
 
 *Inside `vars/main.yml`*:
 

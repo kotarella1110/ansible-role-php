@@ -3,6 +3,9 @@
 # for RHEL/CentOS.
 php_enablerepo: ""
 
+# Use the PHP PPA for Ubuntu.
+php_ppa_use: true
+
 # PHP package state; use 'installed' to make sure it's installed, or 'latest' if
 # you want to upgrade or switch versions using a new repo.
 php_packages_state: installed
