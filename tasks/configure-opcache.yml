@@ -18,7 +18,7 @@
 
 - name: Ensure OpCache config file is present.
   template:
-    src: opcache.ini.j2
+    src: "{{ php_opcache_conf_src }}"
     dest: "{{ item }}/{{ php_opcache_conf_filename }}"
     owner: root
     group: root
