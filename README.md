@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/kotarella1110/ansible-role-php.svg?branch=master)](https://travis-ci.org/kotarella1110/ansible-role-php)
 
 Installs PHP on RedHat/CentOS and Debian/Ubuntu servers.
+
 This role is forked from [geerlingguy/ansible-role-php](https://github.com/geerlingguy/ansible-role-php).
 
 ## Requirements
