@@ -8,7 +8,7 @@ This role is forked from [geerlingguy/ansible-role-php](https://github.com/geerl
 
 ## Requirements
 
-If you're using an older LTS release of Ubuntu or RHEL, with an old/outdated version of PHP, you need to use a repo or PPA with a maintained PHP version, as this role only works with [PHP versions that are currently supported](http://php.net/supported-versions.php) by the PHP community.
+If you're using an older LTS release of RHEL, with an old/outdated version of PHP, you need to use a repo with a maintained PHP version, as this role only works with [PHP versions that are currently supported](http://php.net/supported-versions.php) by the PHP community.
 
 ## Role Variables
 
@@ -23,7 +23,7 @@ _Note: If you're using Debian/Ubuntu, you also need to install `libapache2-mod-f
     php_enable_webserver: true
 
 (For Ubuntu only) Allows you to set a repository for the installation of PHP.
-When using the PHP PPA (12.04: `ppa:ondrej/php`, other: `ppa:ondrej/php`), you need to set the following variable to `true`:
+When using the PHP PPA (12.04: `ppa:ondrej/php5-5.6`, other: `ppa:ondrej/php`), you need to set the following variable to `true`:
 
     php_ppa_use: false
 
