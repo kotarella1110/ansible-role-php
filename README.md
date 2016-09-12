@@ -53,7 +53,7 @@ When using this role with PHP running as `php-fpm` instead of as a process insid
 
 You can specify the configuration file you want to use as a template.The default setting is a `"www.conf.j2"`.
 
-  php_fpm_pool_conf_src: "{{ playbook_dir }}/www.conf.j2"
+    php_fpm_pool_conf_src: "{{ playbook_dir }}/www.conf.j2"
 
 You can specify the configuration file you want to use as a template.The default setting is a `"php-fpm.conf.j2"`.
 
